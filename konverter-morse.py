@@ -1,4 +1,3 @@
-# Dictionary untuk mapping huruf ke kode Morse
 morse_code_dict = {
     'A': '.-', 'B': '-...', 'C': '-.-.', 'D': '-..', 'E': '.', 'F': '..-.', 
     'G': '--.', 'H': '....', 'I': '..', 'J': '.---', 'K': '-.-', 'L': '.-..', 
@@ -10,10 +9,8 @@ morse_code_dict = {
     '/': '-..-.', '-': '-....-', '(': '-.--.', ')': '-.--.-', ' ': '/'
 }
 
-# Reverse dictionary untuk decoding Morse ke teks
 reverse_morse_code_dict = {v: k for k, v in morse_code_dict.items()}
 
-# Fungsi untuk mengubah teks menjadi kode Morse
 def teks_ke_morse(teks):
     morse_code = ''
     for huruf in teks.upper():
@@ -23,7 +20,6 @@ def teks_ke_morse(teks):
             morse_code += '? '  # Jika karakter tidak dikenali
     return morse_code.strip()
 
-# Fungsi untuk mengubah kode Morse menjadi teks
 def morse_ke_teks(morse):
     teks = ''
     morse_kata = morse.split(' ')
@@ -34,7 +30,6 @@ def morse_ke_teks(morse):
             teks += '?'  # Jika kode Morse tidak dikenali
     return teks
 
-# Program utama
 while True:
     print("\nAplikasi Konversi Teks - Morse")
     print("1. Ubah teks menjadi kode Morse")
